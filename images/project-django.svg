@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400">
+  <defs>
+    <linearGradient id="bgGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0c2340"/>
+      <stop offset="100%" stop-color="#0062b8"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" fill="url(#bgGrad2)"/>
+  <circle cx="480" cy="300" r="160" fill="#0080ff" opacity="0.12"/>
+  
+  <!-- Server / API Architecture Graphics -->
+  <rect x="80" y="110" width="180" height="90" rx="10" fill="rgba(255,255,255,0.07)" stroke="#0076df" stroke-width="1.5"/>
+  <circle cx="105" cy="135" r="5" fill="#00e5ff"/>
+  <circle cx="125" cy="135" r="5" fill="#00a3ff"/>
+  <circle cx="145" cy="135" r="5" fill="#0076df"/>
+  <rect x="105" y="155" width="130" height="8" rx="4" fill="rgba(255,255,255,0.2)"/>
+  <rect x="105" y="172" width="90" height="8" rx="4" fill="rgba(0,229,255,0.4)"/>
+
+  <!-- Database Node -->
+  <rect x="340" y="110" width="180" height="90" rx="10" fill="rgba(255,255,255,0.07)" stroke="#00d2ff" stroke-width="1.5"/>
+  <path d="M 370 140 C 370 130 490 130 490 140 C 490 150 370 150 370 140 Z M 370 140 L 370 170 C 370 180 490 180 490 170 L 490 140" fill="none" stroke="#00d2ff" stroke-width="2"/>
+
+  <!-- Connecting line -->
+  <path d="M 260 155 L 340 155" stroke="#ffffff" stroke-width="2" stroke-dasharray="4,4"/>
+
+  <!-- Badge & Text -->
+  <rect x="50" y="50" width="140" height="32" rx="16" fill="rgba(0,118,223,0.3)" stroke="rgba(0,210,255,0.4)" stroke-width="1"/>
+  <text x="120" y="71" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="600" fill="#00d2ff" text-anchor="middle">DJANGO &amp; REST API</text>
+
+  <text x="50" y="340" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="24" font-weight="700" fill="#ffffff">Modular E-Commerce Backend</text>
+  <text x="50" y="370" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" fill="rgba(255,255,255,0.7)">Scalable microservices, PostgreSQL &amp; Redis cache</text>
+</svg>

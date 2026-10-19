@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>پنل مدیریت نمونه کارها — متین حاتمی | Admin Panel</title>
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="icon" type="image/png" href="../images/logo.png" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body class="admin-page">
+    <!-- Background & Rising Particles (Disappear at top) -->
+    <div class="background-container">
+      <div class="background-overlay"></div>
+      <div class="particles" id="particles"></div>
+    </div>
+
+    <section id="adminLogin" class="admin-login-screen" aria-labelledby="admin-login-title">
+      <form class="admin-login-card" novalidate>
+        <div class="hero-badge" style="margin-bottom: 14px;"><i class="fas fa-shield-halved"></i> Secure admin access</div>
+        <h1 id="admin-login-title">ورود به مدیریت</h1>
+        <p>برای ادامه، نام کاربری و رمز عبور را وارد کنید.<br />Enter your username and password to continue.</p>
+        <div class="admin-field">
+          <label for="adminUsername">نام کاربری / Username</label>
+          <input id="adminUsername" name="username" type="text" autocomplete="username" required />
+        </div>
+        <div class="admin-field">
+          <label for="adminPassword">رمز عبور / Password</label>
+          <input id="adminPassword" name="password" type="password" autocomplete="current-password" required />
+        </div>
+        <button class="cta-button" type="submit" style="border: 0; width: 100%; cursor: pointer; justify-content: center;">ورود / Sign in</button>
+        <p id="adminLoginFeedback" class="admin-login-error" role="alert" hidden></p>
+      </form>
+    </section>
+
+    <div id="adminApp" hidden>
+
+    <!-- Clean Header for Admin -->
+    <header class="site-header">
+      <div class="header-inner">
+        <a href="../index.html" class="header-logo">
+          <img src="../images/logo.png" alt="متین حاتمی" class="site-logo-img" />
+        </a>
+
+        <div class="header-actions">
+          <a href="../index.html" class="secondary-button" style="padding: 7px 16px; font-size: 0.85rem;">
+            <i class="fas fa-globe"></i> مشاهده سایت
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <div style="padding: 20px 0; max-width: 820px; margin: 0 auto;">
+        <div style="text-align: center; margin-bottom: 30px;">
+          <div class="hero-badge" style="margin-bottom: 12px;">
+            <i class="fas fa-lock"></i> دسترسی مستقیم به مدیریت نمونه کارها (/admin)
+          </div>
+          <h1 class="section-title">
+            <i class="fas fa-plus-circle"></i> افزودن نمونه کار جدید
+          </h1>
+          <p class="section-subtitle">
+            پروژه جدید خود را در اینجا ثبت کنید. لینک‌های خروجی به صورت امن با ویژگی <code>rel="nofollow noopener noreferrer"</code> و باز شدن در برگه جدید (<code>target="_blank"</code>) ذخیره و در سایت نمایش داده می‌شوند.
+          </p>
+        </div>
+
+        <!-- Feedback Alert Box -->
+        <div
+          id="adminFeedback"
+          style="display: none; background: rgba(52, 199, 89, 0.12); color: #28a745; border: 1px solid rgba(52, 199, 89, 0.3); padding: 14px 20px; border-radius: 10px; margin-bottom: 24px; font-weight: 500; font-size: 0.95rem;"
+        ></div>
+
+        <!-- Add Project Form Card -->
+        <div class="admin-card" style="background: #ffffff; border: 1px solid var(--border-color); border-radius: 16px; padding: 32px; box-shadow: var(--shadow-sm);">
+          <form id="adminProjectForm">
+            <!-- Bilingual Project Titles -->
+            <div class="admin-field">
+              <label for="projectTitleFa"><i class="fas fa-heading" style="color: var(--accent-blue); margin-left: 6px;"></i> عنوان پروژه — فارسی *</label>
+              <input
+                type="text"
+                id="projectTitleFa"
+                required
+                placeholder="مثال: بات اتوماسیون داده با پایتون"
+              />
+            </div>
+
+            <div class="admin-field" dir="ltr" style="text-align: left;">
+              <label for="projectTitleEn">Project title — English *</label>
+              <input type="text" id="projectTitleEn" required placeholder="Example: Python data automation bot" />
+            </div>
+
+            <!-- Bilingual Project Descriptions -->
+            <div class="admin-field">
+              <label for="projectDescFa"><i class="fas fa-align-right" style="color: var(--accent-blue); margin-left: 6px;"></i> توضیحات پروژه — فارسی *</label>
+              <textarea
+                id="projectDescFa"
+                rows="4"
+                required
+                placeholder="توضیح کوتاه درباره عملکرد، دستاوردها، چالش‌ها و نتایج پروژه..."
+              ></textarea>
+            </div>
+
+            <div class="admin-field" dir="ltr" style="text-align: left;">
+              <label for="projectDescEn">Project description — English *</label>
+              <textarea id="projectDescEn" rows="4" required placeholder="A concise description of the work, challenges, and outcome..."></textarea>
+            </div>
+
+            <!-- Project Link URL -->
+            <div class="admin-field">
+              <label for="projectUrl"><i class="fas fa-link" style="color: var(--accent-blue); margin-left: 6px;"></i> آدرس اینترنتی پروژه (URL) *</label>
+              <input
+                type="url"
+                id="projectUrl"
+                required
+                placeholder="https://example.com یا https://t.me/..."
+              />
+              <small style="color: var(--text-muted); display: block; margin-top: 5px; font-size: 0.8rem;">
+                <i class="fas fa-info-circle"></i> این لینک با <strong>nofollow</strong> و در تب جدید (<code>target="_blank"</code>) باز خواهد شد.
+              </small>
+            </div>
+
+            <!-- Tags / Tech Stack -->
+            <div class="admin-field">
+              <label for="projectTags"><i class="fas fa-tags" style="color: var(--accent-blue); margin-left: 6px;"></i> تگ‌ها و تکنولوژی‌ها (با کاما جدا کنید)</label>
+              <input
+                type="text"
+                id="projectTags"
+                placeholder="Python, Django, React, Route, SEO"
+              />
+            </div>
+
+            <!-- Image File Upload or URL -->
+            <div class="admin-field">
+              <label><i class="fas fa-image" style="color: var(--accent-blue); margin-left: 6px;"></i> تصویر نمونه کار</label>
+              
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 10px;">
+                <div>
+                  <span style="font-size: 0.82rem; color: var(--text-muted); display: block; margin-bottom: 5px;">گزینه ۱: بارگذاری فایل تصویر از کامپیوتر</span>
+                  <input
+                    type="file"
+                    id="projectImageFile"
+                    accept="image/*"
+                    style="padding: 9px;"
+                  />
+                </div>
+                <div>
+                  <span style="font-size: 0.82rem; color: var(--text-muted); display: block; margin-bottom: 5px;">گزینه ۲: یا آدرس اینترنتی مستقیم تصویر</span>
+                  <input
+                    type="url"
+                    id="projectImageUrl"
+                    placeholder="https://.../cover.jpg"
+                  />
+                </div>
+              </div>
+
+              <!-- Live Image Preview Box -->
+              <div class="image-preview-box">
+                <img
+                  id="imagePreview"
+                  alt="پیش‌نمایش تصویر"
+                  style="display: none;"
+                />
+                <span id="previewPlaceholder" style="color: var(--text-subtle); font-size: 0.88rem;">
+                  <i class="fas fa-cloud-upload-alt" style="font-size: 1.6rem; display: block; margin-bottom: 6px;"></i>
+                  پیش‌نمایش تصویر پس از انتخاب یا وارد کردن لینک در اینجا نمایش می‌یابد
+                </span>
+              </div>
+            </div>
+
+            <!-- Submit Button & Action Links -->
+            <div style="display: flex; gap: 15px; align-items: center; justify-content: flex-start; margin-top: 25px; flex-wrap: wrap;">
+              <button type="submit" class="cta-button" style="border: none; cursor: pointer; padding: 13px 28px;">
+                <span>ثبت و ذخیره نمونه کار</span>
+                <i class="fas fa-check"></i>
+              </button>
+              <a href="../projects.html" class="secondary-button">
+                <span>مشاهده در صفحه پروژه‌ها (EN)</span>
+                <i class="fas fa-external-link-alt"></i>
+              </a>
+              <a href="../fa/projects.html" class="secondary-button">
+                <span>مشاهده در صفحه پروژه‌ها (FA)</span>
+                <i class="fas fa-external-link-alt"></i>
+              </a>
+            </div>
+          </form>
+        </div>
+
+        <!-- Management List for Added Projects -->
+        <div style="margin-top: 40px;">
+          <h2 style="font-size: 1.25rem; font-weight: 700; color: var(--text-main); margin-bottom: 16px; display: flex; align-items: center; gap: 8px;">
+            <i class="fas fa-list-ul" style="color: var(--accent-blue);"></i> نمونه کارهای ذخیره شده اختصاصی شما
+          </h2>
+          <div id="adminProjectsList">
+            <!-- Populated via script.js -->
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p class="footer-copy">© 2026 متین حاتمی (Matin Hatami). پنل مدیریت محتوا.</p>
+        <div class="footer-links">
+          <a href="../index.html">صفحه اصلی (English)</a>
+          <a href="../fa/index.html">صفحه اصلی (فارسی)</a>
+          <a href="../projects.html">نمونه کارها</a>
+        </div>
+      </div>
+    </footer>
+    </div>
+
+    <script src="../js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400">
+  <defs>
+    <linearGradient id="bgGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b1b36"/>
+      <stop offset="100%" stop-color="#005bab"/>
+    </linearGradient>
+    <linearGradient id="lineGrad1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0076df" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#00d2ff" stop-opacity="0.8"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" fill="url(#bgGrad1)"/>
+  <circle cx="500" cy="80" r="180" fill="#0076df" opacity="0.15"/>
+  <circle cx="100" cy="320" r="140" fill="#00d2ff" opacity="0.1"/>
+  
+  <!-- Grid Lines -->
+  <path d="M 50 100 L 550 100 M 50 200 L 550 200 M 50 300 L 550 300" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  <path d="M 150 50 L 150 350 M 300 50 L 300 350 M 450 50 L 450 350" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  
+  <!-- Network Route Diagram -->
+  <path d="M 120 280 Q 240 120 360 220 T 480 140" fill="none" stroke="url(#lineGrad1)" stroke-width="4" stroke-dasharray="6,4"/>
+  <circle cx="120" cy="280" r="10" fill="#00d2ff"/>
+  <circle cx="270" cy="180" r="14" fill="#0076df" stroke="#ffffff" stroke-width="2"/>
+  <circle cx="360" cy="220" r="8" fill="#00d2ff"/>
+  <circle cx="480" cy="140" r="12" fill="#00e5ff" stroke="#ffffff" stroke-width="2"/>
+
+  <!-- Badge & Text -->
+  <rect x="50" y="50" width="130" height="32" rx="16" fill="rgba(0,118,223,0.3)" stroke="rgba(0,210,255,0.4)" stroke-width="1"/>
+  <text x="115" y="71" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="600" fill="#00d2ff" text-anchor="middle">PYTHON &amp; ROUTE</text>
+
+  <text x="50" y="340" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="24" font-weight="700" fill="#ffffff">Network &amp; Routing Monitor</text>
+  <text x="50" y="370" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" fill="rgba(255,255,255,0.7)">High-performance socket routing &amp; packet inspection</text>
+</svg>

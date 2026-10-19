@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400">
+  <defs>
+    <linearGradient id="bgGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a192f"/>
+      <stop offset="100%" stop-color="#005299"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" fill="url(#bgGrad3)"/>
+  
+  <!-- Dashboard UI Frame -->
+  <rect x="70" y="95" width="460" height="215" rx="12" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.15)" stroke-width="1.5"/>
+  <rect x="70" y="95" width="460" height="32" rx="12" fill="rgba(0,118,223,0.2)"/>
+  <circle cx="95" cy="111" r="5" fill="#ff5f56"/>
+  <circle cx="112" cy="111" r="5" fill="#ffbd2e"/>
+  <circle cx="129" cy="111" r="5" fill="#27c93f"/>
+
+  <!-- Left Sidebar Mock -->
+  <rect x="85" y="140" width="80" height="15" rx="4" fill="rgba(0,118,223,0.5)"/>
+  <rect x="85" y="165" width="65" height="10" rx="3" fill="rgba(255,255,255,0.2)"/>
+  <rect x="85" y="185" width="75" height="10" rx="3" fill="rgba(255,255,255,0.2)"/>
+  <rect x="85" y="205" width="60" height="10" rx="3" fill="rgba(255,255,255,0.2)"/>
+
+  <!-- Main Chart Bars -->
+  <rect x="200" y="230" width="22" height="60" rx="4" fill="#0076df"/>
+  <rect x="235" y="180" width="22" height="110" rx="4" fill="#00a3ff"/>
+  <rect x="270" y="150" width="22" height="140" rx="4" fill="#00d2ff"/>
+  <rect x="305" y="200" width="22" height="90" rx="4" fill="#0076df"/>
+  <rect x="340" y="160" width="22" height="130" rx="4" fill="#00e5ff"/>
+  <rect x="375" y="220" width="22" height="70" rx="4" fill="#00a3ff"/>
+  <rect x="410" y="140" width="22" height="150" rx="4" fill="#38ef7d"/>
+
+  <!-- Trend Curve -->
+  <path d="M 211 220 Q 281 120 421 130" fill="none" stroke="#ffffff" stroke-width="2.5"/>
+
+  <!-- Badge & Text -->
+  <rect x="50" y="50" width="130" height="32" rx="16" fill="rgba(0,118,223,0.3)" stroke="rgba(0,210,255,0.4)" stroke-width="1"/>
+  <text x="115" y="71" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="600" fill="#00d2ff" text-anchor="middle">REACT &amp; NEXT.JS</text>
+
+  <text x="50" y="345" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="24" font-weight="700" fill="#ffffff">Enterprise Analytics Dashboard</text>
+  <text x="50" y="375" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" fill="rgba(255,255,255,0.7)">High-speed SSR dashboard with interactive charts</text>
+</svg>

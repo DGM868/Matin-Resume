@@ -1,0 +1,11 @@
+{
+  "name": "Matin Hatami | Portfolio",
+  "short_name": "Matin Hatami",
+  "lang": "en",
+  "dir": "ltr",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0076DF",
+  "icons": [{ "src": "images/logo.png", "sizes": "512x512", "type": "image/png" }]
+}

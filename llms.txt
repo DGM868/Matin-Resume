@@ -1,0 +1,16 @@
+# Matin Hatami
+
+> Matin Hatami is a bilingual (English and Persian) Software Engineer and Python Developer focused on dependable web systems, clean architecture, technical SEO, Django, React, Next.js, Node.js, and network routing.
+
+- Canonical website: https://matinhatami.ir/
+- Persian website: https://matinhatami.ir/fa/index.html
+- About: https://matinhatami.ir/about.html
+- Skills: https://matinhatami.ir/skills.html
+- Projects: https://matinhatami.ir/projects.html
+- Contact: https://matinhatami.ir/contact.html
+- Sitemap: https://matinhatami.ir/sitemap.xml
+
+## Contact
+
+- Email: matinhatami98@gmail.com
+- Telegram: https://t.me/MATINDGM
